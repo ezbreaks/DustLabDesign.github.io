@@ -1207,12 +1207,7 @@
 	    // Read site ID
 	    // NOTE: If this site is exported, the HTML tag must retain the data-wf-site attribute for forms to work
 	    if (!siteId) { afterSubmit(data); return; }
-	    var url = ("https://webflow.com") + '/api/v1/form/' + siteId;
-
-	    // Work around same-protocol IE XDR limitation - without this IE9 and below forms won't submit
-	    if (retro && url.indexOf(("https://webflow.com")) >= 0) {
-	      url = url.replace(("https://webflow.com"), ("http://formdata.webflow.com"));
-	    }
+	    var url = "https://formspree.io/bacanu.c@gmail.com";
 
 	    $.ajax({
 	      url: url,
