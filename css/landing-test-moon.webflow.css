@@ -82,13 +82,15 @@ h3 {
   top: 0px;
   right: 0px;
   z-index: 0;
-  margin-top: 201px;
+  margin-top: 0px;
   padding: 14px;
   background-color: transparent;
 }
 
 .centerheading.second {
-  position: static;
+  position: relative;
+  z-index: 5;
+  overflow: visible;
   margin-top: 0px;
   margin-bottom: -17px;
   padding-top: 60px;
@@ -114,7 +116,7 @@ h3 {
   right: 0px;
   bottom: 0px;
   z-index: -1;
-  display: block;
+  display: none;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -235,6 +237,7 @@ h3 {
   bottom: 0px;
   z-index: -1;
   overflow: hidden;
+  height: 100%;
 }
 
 .section3 {
@@ -244,11 +247,11 @@ h3 {
   right: 0px;
   bottom: 0px;
   z-index: 0;
+  width: 100%;
   height: 300px;
   margin-bottom: 0px;
-  background-color: #000;
-  background-image: -webkit-radial-gradient(circle farthest-corner at -81% -97%, #000 48%, hsla(0, 0%, 80%, .04));
-  background-image: radial-gradient(circle farthest-corner at -81% -97%, #000 48%, hsla(0, 0%, 80%, .04));
+  background-image: -webkit-radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, .87), rgba(0, 0, 0, .81));
+  background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, .87), rgba(0, 0, 0, .81));
   -webkit-transition: all 1167ms ease;
   transition: all 1167ms ease;
 }
@@ -324,8 +327,8 @@ h3 {
   position: relative;
   height: 100%;
   background-color: #0098ff;
-  background-image: -webkit-radial-gradient(circle farthest-corner at 100% 100%, #fff 49%, #fff);
-  background-image: radial-gradient(circle farthest-corner at 100% 100%, #fff 49%, #fff);
+  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #fff, #fff);
 }
 
 .workitem {
@@ -393,6 +396,7 @@ h3 {
   left: 0px;
   top: 0px;
   right: 0px;
+  z-index: 1000;
   overflow: hidden;
   height: 75px;
   background-color: transparent;
@@ -486,7 +490,7 @@ h3 {
 .portfoliocontainer {
   width: 100%;
   height: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   background-color: #000;
 }
 
@@ -672,6 +676,7 @@ h3 {
   position: relative;
   z-index: 1;
   height: 100%;
+  margin-top: 0px;
   border-top: 2px none #000;
   background-color: #fff;
   background-image: -webkit-radial-gradient(circle farthest-corner at 50% 50%, #fff, #dfdfdf 97%);
@@ -751,7 +756,7 @@ h3 {
 
 .mainlogo {
   display: block;
-  margin: 98px auto 42px;
+  margin: 98px auto 0px;
 }
 
 .footer {
@@ -761,11 +766,15 @@ h3 {
 }
 
 .genesisblock {
-  position: relative;
+  position: fixed;
+  left: 0px;
+  top: 75px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1001;
   display: none;
-  width: 61%;
-  height: 650px;
-  margin-top: -60px;
+  width: 100%;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   background-color: #fff;
@@ -842,10 +851,10 @@ h3 {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: -122;
+  z-index: 1;
   overflow: visible;
   height: 100%;
-  background-color: hsla(0, 0%, 88%, .57);
+  background-color: hsla(0, 0%, 84%, .57);
 }
 
 .map {
@@ -936,6 +945,45 @@ h3 {
 
 .up:hover {
   color: #3792da;
+}
+
+.bgvideo {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  height: 100%;
+}
+
+.overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, .62);
+}
+
+.blacknav.navigationbar {
+  z-index: 1000;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .92), rgba(0, 0, 0, .92));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .92), rgba(0, 0, 0, .92));
+}
+
+.icons {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 30px;
+}
+
+html.w-mod-js *[data-ix="new-interaction"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, -100px);
+  -ms-transform: translate(0px, -100px);
+  transform: translate(0px, -100px);
+}
+
+html.w-mod-js *[data-ix="hidenav"] {
+  display: none;
 }
 
 @font-face {
